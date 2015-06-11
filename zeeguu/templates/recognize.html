@@ -10,18 +10,27 @@
 
 <div class="container exercise_page">
 
+    <!--message for facebook-->
     {% if redirect_to_url %}
         <h1 class="text-center">Let's do some study before play ;)</h1>
         <br/>
     {% endif %}
 
+    <!--THE EXERCISE CARD-->
     <div class="row">
         <div class="col-xs-12 col-md-offset-3 col-md-6" id="exercise-card">
-
+            <!--the upper part of card: too easy, the word-->
             <div class="row">
-            <!--the WORD to be recognized-->
                 <div class="col-xs-12 word-to-recognize" id="question_new">
-                    <span>{{ question["question"]}}</span>
+                    <!--the sleeping face: too easy-->
+                    <div id="i_learned_this">
+                        <a class="exercise-instruction" onclick="iKnowThis()" href="" >
+                            <img title="This exercise is too easy..." class="clickable-symbol" src="../static/img/sleeping-face2.png" />
+                            <!--Too easy-->
+                        </a>
+                    </div>
+                        <!--the word/the message-->
+                    <span id="the_word">{{ question["question"]}}</span>
                     <div class="exercise-instruction">Identify the  word in the example below</div>
                 </div>
             </div>
@@ -33,7 +42,7 @@
                 <!--</div>-->
             <!--</div>-->
 
-            <!--the CONTEXT-->
+            <!--THE CONTEXT-->
             <div class="row">
                 <div class="col-xs-12 text-context" id="example_new">
                     <span>{{question["example"]}}</span>
@@ -44,66 +53,56 @@
             <!--<div class="col-xs-12" id="reason_new" class="recognize_reason">-->
                 <!--<span>{{question["reason"]}}</span></div>-->
 
-
+            <!--THE INPUT ROW-->
             <div class="row">
                 <div class="parent-of-centered-inline-block">
-                        <!--the help/question mark sign centered-->
-                        <div id="question-mark-button">
-
-                            <a id="show_solution" href="#" onclick="showAnswer()">
-                                <img id="question-mark" class="clickable-symbol" src="../static/img/question-mark-grey.png" />
-                            </a>
-
-                            <a id="i_learned_this" onclick="iKnowThis()" hidden href="" >
-                                <img title="This exercise is too easy..." class="clickable-symbol" src="../static/img/bored-face.png" />
-                            </a>
-
-                        </div>
-
-                        <!--the input square-->
-                        <div id="input-box">
-                            <input id="answer" class="input-lg" placeholder="" />
-                            <input id="expected_answer" class="input-lg" hidden value="{{question['answer']}}" />
-                        </div>
-
-
-                        <div id="check-answer-button">
-
-                            <a id="check_answer" href="#" onclick="checkAnswer()">
-                                <img class="clickable-symbol" src="../static/img/forward-green.png">
-                            </a>
-                            <a id="next_exercise" hidden href="">
-                                <!--<i class="fa fa-play button-font-size"></i>-->
-                                <!--<img class="clickable-symbol" src="../static/img/forward-transparent.png">-->
-                                <!--<img class="clickable-symbol" src="../static/img/forward-grey.png">-->
-                                <img class="clickable-symbol" src="../static/img/forward-green.png">
-                            </a>
-                        </div>
-
-
+                    <!--the help/question mark sign centered-->
+                    <div id="question-mark-button">
+                        <a id="show_solution" href="#" onclick="showAnswer()">
+                            <img id="question-mark" class="clickable-symbol" src="../static/img/question-mark-yellow-transparent2.png" />
+                        </a>
                     </div>
 
-                <div hidden id="correct_message" class="text-center">
-                        Correct!
+                    <!--the input square-->
+                    <div id="input-box">
+                        <input id="answer" class="input-lg" placeholder="" />
+                        <input id="expected_answer" class="input-lg" hidden value="{{question['answer']}}" />
                     </div>
 
-
-
+                    <!--the forward button-->
+                    <div id="check-answer-button">
+                        <a id="check_answer" href="#" onclick="checkAnswer()">
+                            <img class="clickable-symbol" src="../static/img/forward-transparent.png">
+                        </a>
+                        <a id="next_exercise" hidden href="">
+                            <!--<i class="fa fa-play button-font-size"></i>-->
+                            <!--<img class="clickable-symbol" src="../static/img/forward-grey.png">-->
+                            <!--<img class="clickable-symbol" src="../static/img/forward-grey.png">-->
+                            <img class="clickable-symbol" src="../static/img/forward-transparent.png">
+                        </a>
+                    </div>
+                </div>
             </div>
 
-                <input id="exercise_source" hidden value="Recognize" />
-                <input id="bookmark_id" hidden value="{{question['bookmark_id']}}" />
-
-
-            </row>
-
+            <!--THE CORRECT MESSAGE-->
+            <div hidden class="parent-of-centered-inline-block" id="correct_message" class="text-center">
+                <img class="clickable-symbol" src="../static/img/smiley-face.png">
+                <p>Correct!</p>
             </div>
 
+            <input id="exercise_source" hidden value="Recognize" />
+            <input id="bookmark_id" hidden value="{{question['bookmark_id']}}" />
+        <!--close EXERCISE CARD-->
         </div>
+
+            <div id="next" class="col-md-3">
+                <img id="next_button" src="../static/img/next.png">
+            </div>
     </div>
+</div>
+
 
     {% if redirect_to_url %}
-
         <div class="row">
             <br/>
             <div class="text-center">
@@ -118,7 +117,5 @@
         <!--</a>-->
     <!--</div>-->
 
-
-</div>
 
 {% endblock %}

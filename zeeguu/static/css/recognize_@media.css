@@ -1,0 +1,112 @@
+.inner-center {
+  display: block;
+  margin: 0px auto; }
+
+.outer-block {
+  width: 100%; }
+
+#authentification-box-title {
+  margin-bottom: 20px;
+  font-size: 30px; }
+
+.authentification-box {
+  background-color: #fafafa;
+  padding: 30px 40px;
+  margin-top: 45px;
+  border: 1px solid #e6f0e6; }
+
+.input-group {
+  margin-bottom: 10px; }
+
+.input-lg {
+  height: 45px !important;
+  font-size: 16px !important; }
+
+.input-group label {
+  font-size: 16px; }
+
+.green-button {
+  font-size: 16px;
+  margin-top: 30px; }
+
+@media screen and (max-width: 992px) {
+  #authentification-box-title {
+    font-size: 42px; }
+
+  .input-group label {
+    font-size: 30px; }
+
+  .green-button {
+    font-size: 30px;
+    padding: 20px 40px; }
+
+  .input-lg {
+    height: 70px !important;
+    font-size: 30px !important; } }
+@media screen and (max-width: 992px) {
+  .input-group {
+    font-size: 30px; }
+
+  .input-lg {
+    height: 70px !important;
+    font-size: 30px !important; }
+
+  #exercise-card {
+    min-height: 450px;
+    font-size: 18px; }
+
+  .clickable-symbol {
+    width: 65px;
+    height: 65px; }
+
+  .word-to-recognize {
+    font-size: 35px; }
+
+  .exercise-instruction {
+    font-size: 18px; }
+
+  #i_learned_this {
+    font-size: 20px; }
+
+  .container {
+    width: 100% !important; } }
+@media screen and (max-width: 768px) {
+  body {
+    background-color: #fff5c5; }
+
+  #exercise-card {
+    border: 0px; }
+
+  .word-to-recognize {
+    width: 100%;
+    text-align: center;
+    font-size: 22px;
+    color: #5E5E5E; }
+
+  #question-mark-button, #check-answer-button {
+    padding-left: 0px;
+    padding-right: 0px;
+    vertical-align: top; }
+
+  .clickable-symbol {
+    height: 40px;
+    width: 40px; }
+
+  .text-context {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    padding-left: 5px;
+    padding-right: 5px; }
+
+  .exercise-instruction {
+    display: none; }
+
+  .input-lg {
+    height: 40px !important;
+    font-size: 22px !important; }
+
+  #exercise-card {
+    min-height: 160px; } }
+
+/*# sourceMappingURL=recognize_@media.css.map */

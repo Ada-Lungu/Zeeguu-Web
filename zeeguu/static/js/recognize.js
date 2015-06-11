@@ -34,6 +34,7 @@ function checkAnswer() {
     if (answerIsCorrect($("#answer").val(), $("#expected_answer").val())) {
         log_new_exercise("Correct");
 
+
         $("#check_answer").hide();
         $("#next_exercise").show().focus().select();
 
@@ -43,6 +44,7 @@ function checkAnswer() {
         $("#correct_message").show();
 
         $("#answer").css("color", "green");
+        $("#answer").css({backgroundColor: "#c0e38a"});
 
 
     } else {
