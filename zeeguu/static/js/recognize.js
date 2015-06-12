@@ -36,7 +36,8 @@ function checkAnswer() {
 
 
         $("#check_answer").hide();
-        $("#next_exercise").show().focus().select();
+        $("#next_exercise").hide().focus().select();
+        $("#next").show().focus().select();
 
         $("#show_solution").hide();
         $("#i_learned_this").show();
@@ -56,15 +57,23 @@ function checkAnswer() {
 }
 
 function showAnswer() {
+//    $("#question-mark").hide();
+//    $("#question-mark-grey").show();
+//
+//    setTimeout(
+//
+//        , 345);
+
     $("#answer").hide();
     $("#expected_answer").show();
 
     $("#check_answer").hide();
-    $("#next_exercise").show();
-    //$("#show_solution").hide();
+    $("#next_exercise").hide();
+    $("#next").show().focus().select();
+    $("#show_solution").hide();
 
     log_new_exercise("Do not know");
-    $("#next_exercise").show().focus().select();
+//    $("#next_exercise").show().focus().select();
 
 }
 
